@@ -167,10 +167,31 @@
 # 2) 임의의 키워드 매개변수 사용하기
 # 키-값 쌍을 모두 받게 만드는 것
 # 사용자 프로필을 만든다. 이름에 관한 정보와 추가되는 정보는 임의의 정보
-def user_profile(first, last, **user_info):
-    profile = {}
-    profile['first'] = first
-    profile['last'] = last
-    for key, value in user_info.items():
-        profile[key] = value
-    return profile
+# def user_profile(first, last, **user_info):
+#     profile = {}
+#     profile['first'] = first
+#     profile['last'] = last
+#     for key, value in user_info.items():
+#         profile[key] = value
+#     return profile
+
+# user_profile = user_profile('joon','lee',location='seoul',field='ai')
+# print(user_profile)
+
+# ---함수를 모듈에 저장---
+# 함수를 따로 저장한 파일을 모듈이라고 한다.
+# 메인 프로그램에서 import하여 사용한다.
+# 1) 함수가 들어있는 모듈과 적용할 프로그램을 분리한다.
+# 작성법은 아래와 같다.
+# 2) import 모듈
+# 3) 모듈.함수 (점표 기법을 사용한다.)
+# 여러 함수 중 특정 함수만 임포트하기
+# from 모듈 import 함수명_01, 함수명_02,\
+# as를 사용하여 함수에 별칭 붙이기
+# 모듈에 함수 모두 임포트하기 import 뒤에 *을 붙인다.
+
+# ---함수 스타일---
+# 함수를 작성하는데도 의미있는 표기법이 있다.
+# 1) 모든 함수에는 독스트링을 작성할 것
+# 2) 매개변수에 기본값을 쓸 때 등호 좌우에 공백을 쓰지 말아야 한다.
+# 3) 매개변수 행이 늘어나도 자동으로 첫번째 행의 들여쓰기와 열을 맞춘다.
